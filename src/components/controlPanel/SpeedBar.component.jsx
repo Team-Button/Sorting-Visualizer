@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
-export const SpeedBar = () => {
-    return (
-        <div>
-            
-        </div>
-    )
+export default function SpeedBar({ setConfig }) {
+  return (
+    <>
+      <h3>Change Speed and Array Size </h3>
+      <div id="speedBar">
+        <></>
+      </div>
+    </>
+  );
 }
