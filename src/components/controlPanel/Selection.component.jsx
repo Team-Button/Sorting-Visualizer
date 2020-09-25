@@ -1,4 +1,6 @@
 import React from "react";
+import { updateAlgorithm } from "../../states/actions";
+import { useDispatch } from "react-redux";
 
 const sortingType = [
   { sortType: "bubbleSort", name: "Bubble Sort" },
@@ -7,20 +9,21 @@ const sortingType = [
 ];
 
 /*
-Receive setSortType props from index.jsx and pass the props up upon selecting
+dispatch algorithm to store upon selecting an algorithm
 */
 
 export default function Selection({ config, setConfig }) {
+  const dispatch = useDispatch();
   return (
     <>
-      {sortingType.map((el) => {
+      {sortingType.map((el) => (
         <h3
           id={el.sortType}
-          onClick={() => setConfig({ ...config, sortType: el.sortType })}
+          onClick={() => dispatch(updateAlgorithm(el.sortType))}
         >
           {el.name}
-        </h3>;
-      })}
+        </h3>
+      ))}
     </>
   );
 }

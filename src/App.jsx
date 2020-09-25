@@ -1,12 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ControlPanel from "./components/controlPanel";
+import Visualizer from "./components/visualizer/Visualizer.component";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <ControlPanel />
+      <Visualizer />
     </div>
   );
 }
