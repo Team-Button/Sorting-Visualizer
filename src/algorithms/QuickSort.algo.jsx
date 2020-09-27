@@ -1,4 +1,4 @@
-export const quickSort = (arr, low = 0, high = arr.length - 1) => {
+export const QuickSort = (arr, low = 0, high = arr.length - 1) => {
   // We leave it as an exercise to the viewer of this code to implement this method.
   if (high - low <= 0) {
     return arr;

@@ -1,30 +1,39 @@
+import {
+  BubbleSort,
+  InsertionSort,
+  QuickSort,
+  SelectionSort,
+} from "../../algorithms";
+
 const initialState = {
-  array: [],
-  currentSort: [],
-  currentSwap: [],
-  pivot: [],
+  mainArray: [],
+  tempArray: [],
+  animationsArray: [],
+  colorPalette: {
+    mainColor: "",
+    seconaryColor: "",
+    pivotColor: "",
+    completeColor: "",
+  },
 };
 
 export default function sortReducer(state = initialState, action) {
   switch (action.type) {
-    case BUBBLE_SORT:
+    case "BUBBLE_SORT":
       return {
         ...state,
-        algorithm: action.payload,
-        isAlgorithmSelected: true,
       };
-    case QUICK_SORT:
+    case "QUICK_SORT":
       return {
         ...state,
-        algorithm: null,
-        errorMessage: action.payload,
-        isAlgorithmSelected: false,
       };
-    case MERGE_SORT:
+    case "MERGE_SORT":
       return {
         ...state,
-        arraySize: action.payload.arraySize,
-        array: action.payload.array,
+      };
+    case "SELECTION_SORT":
+      return {
+        ...state,
       };
     default:
       return state;

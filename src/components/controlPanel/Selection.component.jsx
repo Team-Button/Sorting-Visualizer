@@ -3,9 +3,10 @@ import { updateAlgorithm } from "../../states/actions";
 import { useDispatch } from "react-redux";
 
 const sortingType = [
-  { sortType: "bubbleSort", name: "Bubble Sort" },
-  { sortType: "quickSort", name: "Quick Sort" },
-  { sortType: "mergeSort", name: "Merge Sort" },
+  { sortType: "BUBBLE_SORT", name: "Bubble Sort" },
+  { sortType: "QUICK_SORT", name: "Quick Sort" },
+  { sortType: "MERGE_SORT", name: "Merge Sort" },
+  { sortType: "INSERTION_SORT", name: "Insertion Sort" },
 ];
 
 /*

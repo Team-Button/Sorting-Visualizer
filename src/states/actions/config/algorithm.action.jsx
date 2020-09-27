@@ -5,7 +5,7 @@ export const SET_ALGORITHM_ERROR = "SET_CONFIG_ERROR";
 set algorithm configuration in store
 */
 
-export const updateAlgorithm = (dispatch) => (payload) => {
+export const updateAlgorithm = (payload) => (dispatch) => {
   if (!payload.algorithm) {
     dispatch({
       type: SET_ALGORITHM_ERROR,

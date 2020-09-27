@@ -1,11 +1,18 @@
-export const START = "START";
+export const START_THE_VISUALIZATION = "START_THE_VISUALIZATION";
+export const END_OF_VISUALIZATION = "END_OF_VISUALIZATION";
 
 /*
-start visualization
+start & end visualization
 */
 
-export const startVisualizer = (dispatch) => () => {
+export const startVisualizer = () => (dispatch) => {
   dispatch({
-    type: START,
+    type: START_THE_VISUALIZATION,
+  });
+};
+
+export const endVisualizer = (dispatch) => () => {
+  dispatch({
+    type: END_OF_VISUALIZATION,
   });
 };

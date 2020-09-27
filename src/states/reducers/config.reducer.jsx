@@ -5,7 +5,8 @@ import {
   SET_ARRAY,
   SET_ALGORITHM,
   SET_ALGORITHM_ERROR,
-  START,
+  START_THE_VISUALIZATION,
+  END_OF_VISUALIZATION,
 } from "../actions";
 
 const initialState = {
@@ -40,9 +41,15 @@ export default function configReducer(state = initialState, action) {
         arraySize: action.payload.arraySize,
         array: action.payload.array,
       };
-    case START:
+    case START_THE_VISUALIZATION:
       return {
-        state,
+        ...state,
+        isVisualizing: true,
+      };
+    case END_OF_VISUALIZATION:
+      return {
+        ...state,
+        isVisualizing: false,
       };
     default:
       return state;

@@ -3,11 +3,6 @@ import { useDispatch } from "react-redux";
 import { updateArray } from "../../states/actions";
 
 export default function SpeedBar({ setConfig }) {
-  const [speed, setSpeed] = useState({
-    speed: null,
-    size: 20,
-  });
-
   const dispatch = useDispatch();
 
   return (

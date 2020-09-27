@@ -5,7 +5,7 @@ import Visualizer from "./components/visualizer/Visualizer.component";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App font-orbitron bg-black text-white">
       <ControlPanel />
       <Visualizer />
     </div>

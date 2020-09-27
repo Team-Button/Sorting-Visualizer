@@ -1,4 +1,4 @@
-export const selectionSort = (arr) => {
+export const SelectionSort = (arr) => {
   for (let i = 0; i < arr.length - 1; i++) {
     let cur_index = i;
     let smallest_index = cur_index;
