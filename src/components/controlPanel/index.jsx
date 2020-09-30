@@ -7,6 +7,7 @@ import StartButton from "./StartButton.component";
 export default function ControlPanel() {
   const [config, setConfig] = useState({
     algorithm: null,
+
     arrayLength: null,
     speed: null,
   });
