@@ -1,16 +1,24 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Selection from "./Selection.component";
 import SpeedBar from "./SpeedBar.component";
+import StartButton from "./StartButton.component";
 
 export default function ControlPanel() {
   const [config, setConfig] = useState({
-    sortType: null,
+    algorithm: null,
+
     arrayLength: null,
     speed: null,
   });
 
+  const dispatch = useDispatch();
+  const { algorithm } = useSelector((state) => state.config);
+  // pass to StartButton component, dispatch config state
   const handleStart = (e) => {
     e.preventDefault();
+    dispatch({ type: "START_THE_VISUALIZATION" });
+    dispatch({ type: algorithm });
   };
   return (
     <>
